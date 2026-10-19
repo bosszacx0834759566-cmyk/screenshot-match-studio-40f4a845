@@ -3,6 +3,7 @@ import { useEffect, useRef, useState, type ReactNode } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import { ArrowDown, ArrowUpRight, Plus, X } from "lucide-react";
 import { Scramble } from "@/components/Scramble";
+import issVideo from "@/assets/iss-video.mp4.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -141,8 +142,11 @@ function Index() {
 
       {/* HERO */}
       <section id="top" ref={heroRef} onMouseMove={onMove} className="hero bg-ink">
+        <div className="hero-media" aria-hidden="true">
+          <video src={issVideo.url} autoPlay loop muted playsInline preload="auto" />
+        </div>
 
-        <div className="site-container relative pb-10 pt-32">
+        <div className="site-container relative z-10 pb-10 pt-32">
           <div className="mono reveal mb-10 flex flex-wrap gap-x-8 gap-y-2 text-paper/50"><span>● Link status: nominal</span><span>Lat 13.7563° N / Lon 100.5018° E</span><Clock /></div>
           <h1 className="hero-title"><Lines lines={["Bridging", <span className="hero-sub">Space &amp; Earth.</span>]} /></h1>
           <div className="mt-14 grid gap-10 border-t border-line-dark pt-8 lg:grid-cols-12">
