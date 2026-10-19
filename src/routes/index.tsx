@@ -124,7 +124,7 @@ function Index() {
           <div className="flex items-center gap-6">
             <a href="#contact" className="mono u-link hidden sm:inline-flex"><Scramble text="Contact" /> <ArrowUpRight className="h-3.5 w-3.5" /></a>
             <Dialog.Root open={open} onOpenChange={setOpen}>
-              <Dialog.Trigger className="menu-btn mono" aria-label="Open menu"><span className="menu-btn-fill" /><span className="menu-btn-label hidden sm:inline"><Scramble text="Menu" /></span><span className="menu-btn-icon"><span /><span /></span></Dialog.Trigger>
+              <Dialog.Trigger className="menu-btn mono" aria-label="Open menu"><span className="menu-btn-fill" /><span className="menu-btn-label hidden sm:inline-block"><Scramble text="Menu" /></span><span className="menu-btn-icon"><span className="menu-bars"><span /><span /></span></span></Dialog.Trigger>
               <Dialog.Portal>
                 <Dialog.Overlay className="fixed inset-0 z-[60] overflow-hidden bg-ink">
                   <video src={issVideo.url} autoPlay loop muted playsInline className="absolute inset-0 h-full w-full object-cover grayscale opacity-50" />
